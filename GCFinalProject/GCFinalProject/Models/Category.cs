@@ -9,6 +9,6 @@ namespace GCFinalProject.Models
     {
         public int Category { get; set; }
         public string CategoryName { get; set; }
-        public virtual ICollection<Event> { get; set; }
+        public virtual ICollection<Event>Events { get; set; }
     }
 }
