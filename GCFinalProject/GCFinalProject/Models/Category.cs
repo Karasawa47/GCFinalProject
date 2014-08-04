@@ -7,7 +7,7 @@ namespace GCFinalProject.Models
 {
     public class Category
     {
-        public int Category { get; set; }
+        public int CategoryID { get; set; }
         public string CategoryName { get; set; }
         public virtual ICollection<Event>Events { get; set; }
     }
