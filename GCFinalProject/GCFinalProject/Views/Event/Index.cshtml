@@ -13,6 +13,7 @@
 {
     <p>
         Find Event by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        Select Category: @Html.DropDownList("CategoryId", (IEnumerable<SelectListItem>)ViewBag.SelectListCategory)
         <input type="submit" value="Search" />
     </p>
 }
