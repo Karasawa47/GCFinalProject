@@ -9,6 +9,13 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+@using (Html.BeginForm("Index", "Event", FormMethod.Get))
+{
+    <p>
+        Find Event by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
+}
 <table class="table">
     <tr>
         
@@ -46,9 +53,6 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.EventDesc)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.EventName)
         </td>
         <td>
@@ -68,15 +72,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ContactInfo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LinkUrl)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ImageUrl)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CategoryID)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Location)
