@@ -32,7 +32,9 @@ namespace GCFinalProject.Controllers
             if (!String.IsNullOrEmpty(searchString))
             {
                 events = from e in db.Events
-                         where e.EventName.ToUpper() == (searchString).ToUpper()
+                         //where e.EventName.ToUpper() == (searchString).ToUpper()
+                         where e.EventName.ToUpper().Contains(searchString.ToUpper())
+                         
                          select e;
             }
             return View(events);
