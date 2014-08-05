@@ -16,9 +16,26 @@ namespace GCFinalProject.Controllers
         private EventSiteContext db = new EventSiteContext();
 
         // GET: Event
-        public ActionResult Index()
+        public ActionResult Index(string currentFilter,string searchString)
         {
-            return View(db.Events.ToList());
+            if (searchString != null)
+            {
+                //page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+            ViewBag.CurrentFilter = searchString;
+            var events = from e in db.Events
+                         select e;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                events = from e in db.Events
+                         where e.EventName.ToUpper() == (searchString).ToUpper()
+                         select e;
+            }
+            return View(events);
         }
 
         // GET: Event/Details/5
