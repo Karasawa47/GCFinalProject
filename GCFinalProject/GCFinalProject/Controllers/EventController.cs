@@ -37,6 +37,7 @@ namespace GCFinalProject.Controllers
                          
                          select e;
             }
+            PopulateCategoryDropDown();
             return View(events);
         }
 
@@ -135,6 +136,14 @@ namespace GCFinalProject.Controllers
             return RedirectToAction("Index");
         }
 
+        public void PopulateCategoryDropDown()
+        {
+            var categoryQuery = (from c in db.Categorys
+                                   orderby c.CategoryName
+                                   select  c);
+            
+            ViewBag.SelectListCategory = new SelectList(categoryQuery, "CategoryID","CategoryName");
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)
