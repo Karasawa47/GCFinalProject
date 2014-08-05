@@ -32,7 +32,7 @@ namespace GCFinalProject.Models
 
         [DataType(DataType.Time)]
         [Display(Name = "End Time")]
-        public DateTime EndTime { get; set; }
+        public DateTime? EndTime { get; set; }
 
         public bool IsActive { get; set; }
 
