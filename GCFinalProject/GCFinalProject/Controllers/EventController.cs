@@ -16,7 +16,7 @@ namespace GCFinalProject.Controllers
         private EventSiteContext db = new EventSiteContext();
 
         // GET: Event
-        public ActionResult Index(string currentFilter,string searchString)
+        public ActionResult Index(string currentFilter,string searchString,int? categoryID)
         {
             if (searchString != null)
             {
@@ -35,6 +35,14 @@ namespace GCFinalProject.Controllers
                          //where e.EventName.ToUpper() == (searchString).ToUpper()
                          where e.EventName.ToUpper().Contains(searchString.ToUpper())
                          
+                         select e;
+            }
+            if (categoryID != null && categoryID > 0)
+            {
+                events = from e in events
+                         join c in db.Categorys
+                         on e.CategoryID equals c.CategoryID
+                         where c.CategoryID == (int)categoryID
                          select e;
             }
             PopulateCategoryDropDown();
