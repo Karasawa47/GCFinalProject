@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using GCFinalProject.DAL;
 using GCFinalProject.Models;
+using System.Diagnostics;
 
 namespace GCFinalProject.Controllers
 {
@@ -17,11 +18,13 @@ namespace GCFinalProject.Controllers
 
         // GET: Comment
         public ActionResult Index(int? id)
-        {
+        {    
+            
             var comments = from c in db.Comments
                              select c;
           if (id != null)
           {
+              ViewBag.EventId = id.Value;
               comments = from c in comments
                          where c.EventID == id
                          select c;
@@ -45,9 +48,12 @@ namespace GCFinalProject.Controllers
         }
 
         // GET: Comment/Create
-        public ActionResult Create()
+        public ActionResult Create(int id)
         {
-            return View();
+            Comment comment = new Comment() { EventID = id, Date= DateTime.Now };
+            ViewBag.EventId = id;
+
+            return View(comment);
         }
 
         // POST: Comment/Create
@@ -57,8 +63,14 @@ namespace GCFinalProject.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "CommentID,EventID,Date,CommentText")] Comment comment)
         {
+            //[Bind(Include = "CommentID,EventID,Date,CommentText")]
+            // x = ViewBag.EventId.ToString();
+            Debug.WriteLine(comment.EventID+" "+comment.Date);
+
             if (ModelState.IsValid)
             {
+                comment.EventID =ViewBag.EventId;
+                comment.Date = DateTime.Now;
                 db.Comments.Add(comment);
                 db.SaveChanges();
                 return RedirectToAction("Index");
