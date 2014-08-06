@@ -11,11 +11,10 @@
 </p>
 @using (Html.BeginForm("Index", "Event", FormMethod.Get))
 {
-    <p>
+    <p >
         Find Event by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
-        Select Category: @Html.DropDownList("CategoryId", (IEnumerable<SelectListItem>)ViewBag.SelectListCategory)
-        <input type="submit" value="Search" />
-    </p>
+        Select Category:<span style="color:black"> @Html.DropDownList("CategoryId", (IEnumerable<SelectListItem>)ViewBag.SelectListCategory)</span><input type="submit" value="Search" />
+</p>
 }
 <table class="table">
     <tr>
