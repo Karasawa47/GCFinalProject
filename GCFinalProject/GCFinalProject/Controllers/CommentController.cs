@@ -16,9 +16,17 @@ namespace GCFinalProject.Controllers
         private EventSiteContext db = new EventSiteContext();
 
         // GET: Comment
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
-            return View(db.Comments.ToList());
+            var comments = from c in db.Comments
+                             select c;
+          if (id != null)
+          {
+              comments = from c in comments
+                         where c.EventID == id
+                         select c;
+          }
+            return View(comments);
         }
 
         // GET: Comment/Details/5
