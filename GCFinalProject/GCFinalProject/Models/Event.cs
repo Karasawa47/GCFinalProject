@@ -8,11 +8,12 @@ namespace GCFinalProject.Models
 {
     public class Event
     {
+        [Required]
         public int EventID { get; set; }
-
+        [Required]
         [Display(Name = "Event Description")]
         public string EventDesc { get; set; }
-
+        [Required]
         [Display(Name="Event Name")]
         public string EventName { get; set; }
         
@@ -25,11 +26,11 @@ namespace GCFinalProject.Models
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Display(Name = "End Date")]
         public DateTime EndDate { get; set; }
-
+        
         [DataType(DataType.Time)]
         [Display(Name = "Start Time")]
         public DateTime StartTime { get; set; }
-
+        
         [DataType(DataType.Time)]
         [Display(Name = "End Time")]
         public DateTime? EndTime { get; set; }
@@ -44,9 +45,9 @@ namespace GCFinalProject.Models
 
         [Display(Name = "Image URL")]
         public string ImageUrl { get; set; }
-
+        [Required]
         public int CategoryID { get; set; }
-
+        [Required]
         public string Location { get; set; }
 
         [Display(Name = "Short Description")]
