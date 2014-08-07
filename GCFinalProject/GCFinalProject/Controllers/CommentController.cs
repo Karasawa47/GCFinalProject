@@ -69,11 +69,11 @@ namespace GCFinalProject.Controllers
 
             if (ModelState.IsValid)
             {
-                comment.EventID =ViewBag.EventId;
+                
                 comment.Date = DateTime.Now;
                 db.Comments.Add(comment);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", new { id = comment.EventID });
             }
 
             return View(comment);

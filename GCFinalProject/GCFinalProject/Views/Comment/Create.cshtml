@@ -31,6 +31,9 @@
                 @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
             </div>
         </div>*@
+        <div class="form-group">
+            <input type="hidden" name="EventID" value="@ViewBag.EventId" />
+        </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.CommentText, htmlAttributes: new { @class = "control-label col-md-2" })
