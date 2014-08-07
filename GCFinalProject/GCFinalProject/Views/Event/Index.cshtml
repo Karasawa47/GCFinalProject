@@ -13,15 +13,15 @@
 {
     <p >
         Find Event by Name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
-        Select Category:<span style="color:black"> @Html.DropDownList("CategoryId", (IEnumerable<SelectListItem>)ViewBag.SelectListCategory)</span><input type="submit" value="Search" />
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp  Select Category:&nbsp&nbsp&nbsp<span style="color:black"> @Html.DropDownList("CategoryId", (IEnumerable<SelectListItem>)ViewBag.SelectListCategory)</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" value="Search" />
 </p>
 }
 @using (Html.BeginForm("Index", "Event", FormMethod.Get))
 {
     <p>
-        <label for="dateS">Start date:</label>@Html.JQueryUI().Datepicker("dateS", DateTime.Today)
-        <label for="dateE">End date:</label>@Html.JQueryUI().Datepicker("dateE", DateTime.Today.AddDays(7))
-        <input type="submit" value="Filter Dates" />
+        <label for="dateS">Start date:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>@Html.JQueryUI().Datepicker("dateS", DateTime.Today)
+        <label for="dateE">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    End date:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>@Html.JQueryUI().Datepicker("dateE", DateTime.Today.AddDays(7))
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp       <input type="submit" value="Filter Dates" />
     </p>
 }
 <table class="table">
