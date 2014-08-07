@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using GCFinalProject.DAL;
 using GCFinalProject.Models;
+using System.Diagnostics;
+using System.Data.Entity.Core.Objects;
 
 namespace GCFinalProject.Controllers
 {
@@ -16,7 +18,7 @@ namespace GCFinalProject.Controllers
         private EventSiteContext db = new EventSiteContext();
 
         // GET: Event
-        public ActionResult Index(string currentFilter,string searchString,int? categoryID)
+        public ActionResult Index(DateTime? dateS,DateTime? dateE,string currentFilter,string searchString,int? categoryID)
         {
             if (searchString != null)
             {
@@ -43,6 +45,12 @@ namespace GCFinalProject.Controllers
                          join c in db.Categorys
                          on e.CategoryID equals c.CategoryID
                          where c.CategoryID == (int)categoryID
+                         select e;
+            }
+            Debug.WriteLine(dateS+"  "+dateE );
+            if(dateS!=null && dateE !=null){
+                events = from e in db.Events
+                         where (e.StartDate >= DbFunctions.TruncateTime(dateS) && e.StartDate <= DbFunctions.TruncateTime(dateE))
                          select e;
             }
             PopulateCategoryDropDown();
