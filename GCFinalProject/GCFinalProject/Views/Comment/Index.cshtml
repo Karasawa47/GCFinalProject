@@ -7,12 +7,13 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+   <!-- @Html.ActionLink("Create New", "Create")-->
+
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.EventID)
+         <!-- @Html.DisplayNameFor(model => model.EventID)-->
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Date)
@@ -26,7 +27,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.EventID)
+         <!--  <! @Html.DisplayFor(modelItem => item.EventID)-->
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Date)
