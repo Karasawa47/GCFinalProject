@@ -3,53 +3,64 @@
 }
 
 <div class="jumbotron">
-    <h1>Detroit Events </h1>
-    @using (Html.BeginForm("Index", "Event", FormMethod.Get))
-    {
-        <p id="HomeCalendar">
-            @Html.JQueryUI().Datepicker("dateS", DateTime.Today).Inline(true)
-            <input type="submit" value="Filter Dates" />
+    <div>
+        <div class="JumboHeader">
 
-        </p>
-    }
-    <p class="lead">Events in the  Metro Detroit area.</p>
-    
+            <h1>Detroit Events </h1>
+            @using (Html.BeginForm("Index", "Event", FormMethod.Get))
+            {
+                <p id="HomeCalendar">
+                    @Html.JQueryUI().Datepicker("dateS", DateTime.Today).Inline(true)
+                    <input type="submit" value="Filter Dates" />
+
+                </p>
+            }
+        </div>
+        <div id="comslider_in_point_315211"class="Slider"></div>
+        <script type="text/javascript">var oCOMScript315211 = document.createElement('script'); oCOMScript315211.src = "http://commondatastorage.googleapis.com/comslider/target/users/1407523368xe8cdedcea7eac715a577cf949fc8ec84/comslider.js?timestamp=1407528806"; oCOMScript315211.type = 'text/javascript'; document.getElementsByTagName("head").item(0).appendChild(oCOMScript315211);</script>
+    </div>
 </div>
 
 <div class="row">
     <div class="col-md-3">
-       <center><h2>Music</h2>
-        <p>
-         <<img src='@Url.Content("~/Content/Images/imagesHBJ7HR09.jpg")' alt="Music" width="200" height="230">
-        </p></center>
-       
-    </div>
-    <div class="col-md-3">
-        <center><h2>Festivals </h2>
-        <p>
-        <<img src='@Url.Content("~/Content/Images/imagesU2QHJLZK.jpg")' alt="Festivals" width="200" height="230">
-        </p></center>
+        <center>
+            <h2>Music</h2>
+            <p>
+                <<img src='@Url.Content("~/Content/Images/imagesHBJ7HR09.jpg")' alt="Music" width="200" height="230">
+            </p>
+        </center>
 
     </div>
     <div class="col-md-3">
-        <center><h2>Sports</h2>
-        <p>
-        <<img src='@Url.Content("~/Content/Images/imagesP9C07HZA.jpg")' alt="Sports" width="200" height="230">
-        </p></center>
+        <center>
+            <h2>Festivals </h2>
+            <p>
+                <<img src='@Url.Content("~/Content/Images/imagesU2QHJLZK.jpg")' alt="Festivals" width="200" height="230">
+            </p>
+        </center>
 
-       
     </div>
-    <div class="row">
-        <div class="col-md-3">
-            <center>
-                <h2>Food/Drink</h2>
-                <p>
-                    <<img src='@Url.Content("~/Content/Images/images.jpg")' alt="Food/Drink" width="200" height="230">
-                </p>
-            </center>
+    <div class="col-md-3">
+        <center>
+            <h2>Sports</h2>
+            <p>
+                <<img src='@Url.Content("~/Content/Images/imagesP9C07HZA.jpg")' alt="Sports" width="200" height="230">
+            </p>
+        </center>
 
-        </div>
-        
+
     </div>
+
+    <div class="col-md-3">
+        <center>
+            <h2>Food/Drink</h2>
+            <p>
+                <<img src='@Url.Content("~/Content/Images/images.jpg")' alt="Food/Drink" width="200" height="230">
+            </p>
+        </center>
+
+    </div>
+
+
 </div>
 

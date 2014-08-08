@@ -19,4 +19,15 @@ textarea {
     font-size: 15pt;
 
 }
+ .Slider{float:right;
+         margin-top:90px
+    
+ }
+ .JumboHeader{
+     width:40%;
+     float:left;
+ }
+ .row{
+     clear:both;
+ }
 
