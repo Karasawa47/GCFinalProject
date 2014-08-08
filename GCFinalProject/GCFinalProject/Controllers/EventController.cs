@@ -47,7 +47,6 @@ namespace GCFinalProject.Controllers
                          where c.CategoryID == (int)categoryID
                          select e;
             }
-            Debug.WriteLine(dateS+"  "+dateE );
             if(dateS!=null && dateE !=null){
                 events = from e in db.Events
                          where (e.StartDate >= DbFunctions.TruncateTime(dateS) && e.StartDate <= DbFunctions.TruncateTime(dateE))
@@ -75,6 +74,7 @@ namespace GCFinalProject.Controllers
         // GET: Event/Create
         public ActionResult Create()
         {
+            PopulateCategoryDropDown();
             return View();
         }
 
