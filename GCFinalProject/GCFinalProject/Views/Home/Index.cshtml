@@ -4,6 +4,14 @@
 
 <div class="jumbotron">
     <h1>Detroit Events </h1>
+    @using (Html.BeginForm("Index", "Event", FormMethod.Get))
+    {
+        <p id="HomeCalendar">
+            @Html.JQueryUI().Datepicker("dateS", DateTime.Today).Inline(true)
+            <input type="submit" value="Filter Dates" />
+
+        </p>
+    }
     <p class="lead">Events in the  Metro Detroit area.</p>
     
 </div>
