@@ -47,16 +47,12 @@ namespace GCFinalProject.Models
         public string ImageUrl { get; set; }
         [Required]
         public int CategoryID { get; set; }
-
-        [StringLength(25, MinimumLength = 0)]
         [Required]
         public string Location { get; set; }
-       
-        
-        [StringLength(40, MinimumLength=0) ]
+
         [Display(Name = "Short Description")]
         public string  ShortSummary { get; set; }
 
         public virtual ICollection<Comment> Comments { get; set; }
     }
-}  
+}
