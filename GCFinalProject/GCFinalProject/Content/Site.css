@@ -17,8 +17,12 @@ textarea {
 }
  div.ui-datepicker{
     font-size: 15pt;
+    background-color: lightblue;
 
 }
+ .ui-datepicker-calendar {
+     background-color:lightblue;
+ }
  .Slider{float:right;
          margin-top:90px
     
