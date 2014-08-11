@@ -24,40 +24,48 @@
 <div class="row">
     <div class="col-md-3">
         <center>
-            <h2>Music</h2>
-            <p>
-                <<img src='@Url.Content("~/Content/Images/imagesHBJ7HR09.jpg")' alt="Music" width="200" height="230">
-            </p>
-        </center>
+            <h2 class ="music-title">
+                @Html.ActionLink("Music",
+                        "Index", "Event")</h2>
+                <p>
+                    <img src='@Url.Content("~/Content/Images/imagesHBJ7HR09.jpg")' alt="Music" width="200" height="230">
+                </p>
+</center>
 
     </div>
     <div class="col-md-3">
         <center>
-            <h2>Festivals </h2>
-            <p>
-                <<img src='@Url.Content("~/Content/Images/imagesU2QHJLZK.jpg")' alt="Festivals" width="200" height="230">
-            </p>
-        </center>
+            <h2 class="Festival-title">
+                @Html.ActionLink("Festival",
+                        "Index", "Event") </h2>
+                <p>
+                    <img src='@Url.Content("~/Content/Images/imagesU2QHJLZK.jpg")' alt="Festivals" width="200" height="230">
+                </p>
+</center>
 
     </div>
     <div class="col-md-3">
         <center>
-            <h2>Sports</h2>
-            <p>
-                <<img src='@Url.Content("~/Content/Images/imagesP9C07HZA.jpg")' alt="Sports" width="200" height="230">
-            </p>
-        </center>
+            <h2 class="Sport-title">
+                @Html.ActionLink("Sports",
+                        "Index", "Event")</h2>
+                <p>
+                    <img src='@Url.Content("~/Content/Images/imagesP9C07HZA.jpg")' alt="Sports" width="200" height="230">
+                </p>
+</center>
 
 
     </div>
 
     <div class="col-md-3">
         <center>
-            <h2>Food/Drink</h2>
-            <p>
-                <<img src='@Url.Content("~/Content/Images/images.jpg")' alt="Food/Drink" width="200" height="230">
-            </p>
-        </center>
+            <h2 class="food/drink-title">
+                @Html.ActionLink("Food/Drink",
+                        "Index", "Event")</h2>
+                <p>
+                    <<img src='@Url.Content("~/Content/Images/images.jpg")' alt="Food/Drink" width="200" height="230">
+                </p>
+</center>
 
     </div>
 
