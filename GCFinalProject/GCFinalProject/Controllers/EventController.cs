@@ -107,6 +107,7 @@ namespace GCFinalProject.Controllers
             {
                 return HttpNotFound();
             }
+            PopulateCategoryDropDown();
             return View(@event);
         }
 
