@@ -29,7 +29,12 @@
                 <p>
                     @*<img src='@Url.Content("~/Content/Images/imagesHBJ7HR09.jpg")' alt="Music" width="200" height="230">*@
 
-                                                            @using (Html.BeginForm("Index", "Event"))
+                                                            @{
+                                                                var routeValues = new RouteValueDictionary();
+                                                                routeValues.Add("CategoryId", "2");
+                                                            }
+
+                                                            @using (Html.BeginForm("Index", "Event", routeValues))
                                                             {
 
                                                                 <input type="image" src="/Content/Images/imagesHBJ7HR09.jpg" width="200" height="230">          }
@@ -44,7 +49,12 @@
                 @Html.ActionLink("festival", "index", "event", new { categoryid = 5 }, null) </h2>
                 <p>
                     @*<img src='@Url.Content("~/content/images/imagesu2qhjlzk.jpg")' alt="festivals" width="200" height="230">*@
-                    @using (Html.BeginForm("Index", "Event"))
+
+                    @{
+                        var routeValues1 = new RouteValueDictionary();
+                        routeValues1.Add("CategoryId", "5");
+                    }
+                    @using (Html.BeginForm("Index", "Event", routeValues1))
                                                             {
 
                         <input type="image" src="/Content/Images/imagesu2qhjlzk.jpg " width=" 200" height="230">   }
@@ -59,7 +69,11 @@
                 <p >
                   @*<img src='@Url.Content("~/content/images/imagesp9c07hza.jpg")' alt="sports" width="200" height="230">*@
                     
-                    @using (Html.BeginForm("Index", "Event"))
+                    @{
+                        var routeValues2 = new RouteValueDictionary();
+                        routeValues2.Add("CategoryId", "4");
+                    }
+                    @using (Html.BeginForm("Index", "Event", routeValues2))
                     {
 
                         <input type="image" src="/Content/Images/imagesp9c07hza.jpg" width="200" height="230">          }
@@ -75,7 +89,12 @@
                 @Html.ActionLink("food/drink","index", "event", new { categoryid = 1 }, null)</h2>
                 <p>
                     @*<<img src='@Url.Content("~/content/images/images.jpg")' alt="food/drink" width="200" height="230">*@
-                                        @using (Html.BeginForm("Index", "Event"))
+                       
+                     @{
+                         var routeValues3 = new RouteValueDictionary();
+                         routeValues3.Add("CategoryId", "1");
+                    }              
+                     @using (Html.BeginForm("Index", "Event", routeValues3))
                     {
 
                                             <input type="image" src="/Content/Images/images.jpg " width=" 200" height="230">          }
