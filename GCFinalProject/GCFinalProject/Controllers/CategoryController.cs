@@ -83,9 +83,12 @@ namespace GCFinalProject.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(category).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (category.CategoryID > 8)
+                {
+                    db.Entry(category).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
+                    return RedirectToAction("Index");
             }
             return View(category);
         }
@@ -111,8 +114,11 @@ namespace GCFinalProject.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Category category = db.Categorys.Find(id);
-            db.Categorys.Remove(category);
-            db.SaveChanges();
+            if (category.CategoryID > 8)
+            {
+                db.Categorys.Remove(category);
+                db.SaveChanges();
+            }
             return RedirectToAction("Index");
         }
 
