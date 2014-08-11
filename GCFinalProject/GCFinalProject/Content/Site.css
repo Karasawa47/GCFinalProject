@@ -2,6 +2,24 @@
  font-size: 16px;
     padding-top: 40px;
     padding-bottom: 20px;
+    background: -webkit-radial-gradient(darkblue, black, darkred); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(darkblue, black, darkred); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(darkblue, black, darkred); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(darkblue, black, darkred); /* Standard syntax */
+}
+.navbar{
+    background: -webkit-linear-gradient(left,  red,darkred,black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right,   red,darkred,black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right,  red,darkred,black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right,  red,darkred,black); /* Standard syntax */
+    border-bottom-color:darkblue;
+    
+}
+.jumbotron{
+    background: -webkit-linear-gradient(left, darkblue,darkRed,black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, darkblue,darkRed,black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, darkblue,darkRed,black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, darkblue,darkRed,black); /* Standard syntax */
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -18,11 +36,11 @@ textarea {
 }
  div.ui-datepicker{
     font-size: 15pt;
-    background-color: lightblue;
+    background-color: #808080;
 
 }
  .ui-datepicker-calendar {
-     background-color:lightblue;
+     background-color:#808080;
  }
  .Slider{float:right;
          margin-top:90px
@@ -33,7 +51,9 @@ textarea {
      float:left;
  }
  .jumbotron{
-     height:515px;
+     height:0;
+     padding:0;
+     margin:0;
  }
  .row{
      clear:both;
