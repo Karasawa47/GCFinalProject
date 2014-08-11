@@ -49,6 +49,12 @@ namespace GCFinalProject.Controllers
             }
             if(dateS!=null && dateE !=null){
                 events = from e in db.Events
+                         where (e.StartDate >= DbFunctions.TruncateTime(dateS) && e.StartDate <= DbFunctions.TruncateTime(((DateTime)dateS).AddDays(7)))
+                         select e;
+            }
+            if (dateS != null && dateE == null)
+            {
+                events = from e in db.Events
                          where (e.StartDate >= DbFunctions.TruncateTime(dateS) && e.StartDate <= DbFunctions.TruncateTime(dateE))
                          select e;
             }
