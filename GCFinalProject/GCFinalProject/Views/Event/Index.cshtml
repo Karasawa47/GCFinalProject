@@ -12,8 +12,8 @@
 @using (Html.BeginForm("Index", "Event", FormMethod.Get))
 {
     <p >
-        Find Event by Name:&nbsp&nbsp&nbsp @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp  Select Category:&nbsp&nbsp&nbsp&nbsp&nbsp<span style="color:black"> @Html.DropDownList("CategoryId", (IEnumerable<SelectListItem>)ViewBag.SelectListCategory)</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" value="Search" />
+        <B>Find Event by Name: &nbsp&nbsp&nbsp @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp  Select Category:&nbsp&nbsp&nbsp&nbsp&nbsp<span style="color:black"> @Html.DropDownList("CategoryId", (IEnumerable<SelectListItem>)ViewBag.SelectListCategory)</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" value="Search" />
 </p>
 }
 @using (Html.BeginForm("Index", "Event", FormMethod.Get))
