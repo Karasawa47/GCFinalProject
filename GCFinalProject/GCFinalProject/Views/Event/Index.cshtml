@@ -4,16 +4,16 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h1><span style="color:#ffffff">Index</h1>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <h2> @Html.ActionLink("Create New", "Create")</h2>
 </p>
 @using (Html.BeginForm("Index", "Event", FormMethod.Get))
 {
     <p >
-        Find Event by Name:&nbsp&nbsp&nbsp @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp  Select Category:&nbsp&nbsp&nbsp&nbsp&nbsp<span style="color:black"> @Html.DropDownList("CategoryId", (IEnumerable<SelectListItem>)ViewBag.SelectListCategory)</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" value="Search" />
+        <B>Find Event by Name: &nbsp&nbsp&nbsp @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp  Select Category:&nbsp&nbsp&nbsp&nbsp<span style="color:black"> @Html.DropDownList("CategoryId", (IEnumerable<SelectListItem>)ViewBag.SelectListCategory)</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" value="Search" />
 </p>
 }
 @using (Html.BeginForm("Index", "Event", FormMethod.Get))
@@ -41,9 +41,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.EndTime)
-        </th>
+        </th>*@
        
-        <th>*@
+        <th>
            <!-- @Html.DisplayNameFor(model => model.ContactInfo)-->
         </th>
         
@@ -64,7 +64,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.StartDate)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.EndDate)
         </td>
         <td>
@@ -72,7 +72,7 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.EndTime)
-        </td>
+        </td>*@
        
         <td>
            <!-- @Html.DisplayFor(modelItem => item.ContactInfo)-->

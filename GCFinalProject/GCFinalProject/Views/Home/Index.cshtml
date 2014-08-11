@@ -41,8 +41,7 @@
     <div class="col-md-3">
         <center>
             <h2 class="festival-title">
-                @Html.ActionLink("festival",
-                                          "index", "event", new{categoryid=5},null) </h2>
+                @Html.ActionLink("festival", "index", "event", new { categoryid = 5 }, null) </h2>
                 <p>
                     @*<img src='@Url.Content("~/content/images/imagesu2qhjlzk.jpg")' alt="festivals" width="200" height="230">*@
                     @using (Html.BeginForm("Index", "Event"))
@@ -56,8 +55,7 @@
     <div class="col-md-3">
         <center>
             <h2 class="sport-title">
-                @Html.ActionLink("sports",
-                                 "index", "event", new {categoryid=4}, null)</h2>
+                @Html.ActionLink("sports","index", "event", new {categoryid=4}, null)</h2>
                 <p >
                   @*<img src='@Url.Content("~/content/images/imagesp9c07hza.jpg")' alt="sports" width="200" height="230">*@
                     
@@ -74,8 +72,7 @@
     <div class="col-md-3">
         <center>
             <h2 class="food/drink-title">
-                @Html.ActionLink("food/drink",
-                                 "index", "event", new { categoryid = 1 }, null)</h2>
+                @Html.ActionLink("food/drink","index", "event", new { categoryid = 1 }, null)</h2>
                 <p>
                     @*<<img src='@Url.Content("~/content/images/images.jpg")' alt="food/drink" width="200" height="230">*@
                                         @using (Html.BeginForm("Index", "Event"))
