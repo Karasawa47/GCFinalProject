@@ -31,6 +31,9 @@ textarea {
      width:40%;
      float:left;
  }
+ .jumbotron{
+     height:515px;
+ }
  .row{
      clear:both;
  }
