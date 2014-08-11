@@ -25,8 +25,7 @@
     <div class="col-md-3">
         <center>
             <h2 class ="music-title">
-                @Html.ActionLink("Music",
-                        "Index", "Category/Details/2")</h2>
+                @Html.ActionLink("Music", "Index", "Event", new {CategoryId=2}, null)</h2>
                 <p>
                     <img src='@Url.Content("~/Content/Images/imagesHBJ7HR09.jpg")' alt="Music" width="200" height="230">
                 </p>
@@ -37,7 +36,7 @@
         <center>
             <h2 class="Festival-title">
                 @Html.ActionLink("Festival",
-                                          "Index", "Category/Details/5") </h2>
+                                          "Index", "Event", new{CategoryID=5},null) </h2>
                 <p>
                     <img src='@Url.Content("~/Content/Images/imagesU2QHJLZK.jpg")' alt="Festivals" width="200" height="230">
                 </p>
@@ -48,7 +47,7 @@
         <center>
             <h2 class="Sport-title">
                 @Html.ActionLink("Sports",
-                                 "Index", "Category/Details/4")</h2>
+                                 "Index", "Event", new {CategoryID=4}, null)</h2>
                 <p>
                     <img src='@Url.Content("~/Content/Images/imagesP9C07HZA.jpg")' alt="Sports" width="200" height="230">
                 </p>
@@ -61,7 +60,7 @@
         <center>
             <h2 class="food/drink-title">
                 @Html.ActionLink("Food/Drink",
-                                 "Index", "Category/Details/1")</h2>
+                                 "Index", "Event", new { CategoryID = 1 }, null)</h2>
                 <p>
                     <<img src='@Url.Content("~/Content/Images/images.jpg")' alt="Food/Drink" width="200" height="230">
                 </p>
