@@ -10,7 +10,7 @@ namespace GCFinalProject.Models
     {
         [Required]
         public int EventID { get; set; }
-        [Required]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "The Enter a Name field is required")]
         [Display(Name = "Event Description")]
         public string EventDesc { get; set; }
         [Required]
@@ -45,7 +45,8 @@ namespace GCFinalProject.Models
 
         [Display(Name = "Image URL")]
         public string ImageUrl { get; set; }
-        [Required]
+        
+        [Required(AllowEmptyStrings = false, ErrorMessage = "A Category ID field is required")]
         public int CategoryID { get; set; }
 
         [StringLength(25, MinimumLength = 0)]
