@@ -44,16 +44,15 @@ textarea {
 }
  div.ui-datepicker{
     font-size: 15pt;
-    background-color:aquamarine;
+    background: radial-gradient(to right,  darkgray,darkred,black);
+    color:white;
 
 }
  .ui-datepicker-calendar {
-     background-color: aquamarine;
+     background: radial-gradient(to right,  darkgray,darkred,black);
  }
 
- .ui-datepicker-inline{
-     background-color:gainsboro
- }
+
  .Slider{float:right;
          margin-top:90px
     
@@ -67,10 +66,11 @@ textarea {
  .row{
      clear:both;
  }
- h1{
+ .jumbotron h1{
      color:darkturquoise;
  }
  .btn{
      background: linear-gradient(to right,  red,darkred,black); /* Standard syntax */
+     color:white;
  }
 
