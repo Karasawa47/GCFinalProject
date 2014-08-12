@@ -2,10 +2,14 @@
  font-size: 16px;
     padding-top: 40px;
     padding-bottom: 20px;
-    background: -webkit-radial-gradient(darkblue, black, darkred); /* Safari 5.1 to 6.0 */
-  background: -o-radial-gradient(darkblue, black, darkred); /* For Opera 11.6 to 12.0 */
-  background: -moz-radial-gradient(darkblue, black, darkred); /* For Firefox 3.6 to 15 */
-  background: radial-gradient(darkblue, black, darkred); /* Standard syntax */
+    background-image: url(Images/nightDetroitSkyline1800x1200.jpg); 
+    
+  background-size: cover;
+    Background-attachment:fixed;
+    /*background: -webkit-radial-gradient(darkblue, black, darkred); /* Safari 5.1 to 6.0 */
+  /*background: -o-radial-gradient(darkblue, black, darkred); /* For Opera 11.6 to 12.0 */
+  /*background: -moz-radial-gradient(darkblue, black, darkred); /* For Firefox 3.6 to 15 */
+  /*background: radial-gradient(darkblue, black, darkred); /* Standard syntax */
 }
 .navbar{
     background: -webkit-linear-gradient(left,  red,darkred,black); /* For Safari 5.1 to 6.0 */
@@ -40,11 +44,15 @@ textarea {
 }
  div.ui-datepicker{
     font-size: 15pt;
-    background-color: #808080;
+    background-color:aquamarine;
 
 }
  .ui-datepicker-calendar {
-     background-color: #808080;
+     background-color: aquamarine;
+ }
+
+ .ui-datepicker-inline{
+     background-color:gainsboro
  }
  .Slider{float:right;
          margin-top:90px
@@ -53,9 +61,16 @@ textarea {
  .JumboHeader{
      width:40%;
      float:left;
+     color:darkturquoise;
  }
  
  .row{
      clear:both;
+ }
+ h1{
+     color:darkturquoise;
+ }
+ .btn{
+     background: linear-gradient(to right,  red,darkred,black); /* Standard syntax */
  }
 
