@@ -13,7 +13,7 @@
 {
     <p >
         <B>Find Event by Name: &nbsp&nbsp&nbsp&nbsp&nbsp @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp  Select Category:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="color:black"> @Html.DropDownList("CategoryId", (IEnumerable<SelectListItem>)ViewBag.SelectListCategory)</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" value="Search" />
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp  Select Category:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="color:black"> @Html.DropDownList("CategoryId", (IEnumerable<SelectListItem>)ViewBag.SelectListCategory)</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" value="Search" />
 </p>
 }
 @using (Html.BeginForm("Index", "Event", FormMethod.Get))
