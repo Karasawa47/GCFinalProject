@@ -49,7 +49,7 @@ namespace GCFinalProject.Models
         [Required(AllowEmptyStrings = false, ErrorMessage = "A Category ID field is required")]
         public int CategoryID { get; set; }
 
-        [StringLength(40, MinimumLength = 0)]
+        [StringLength(50, MinimumLength = 0)]
         [Required]
         public string Location { get; set; }
        
