@@ -96,3 +96,6 @@ color:antiquewhite
       background-size:cover;
       margin-left:-40px;
  }
+ .table{
+     background-color:rgba(128, 128, 128,.4);
+ }
