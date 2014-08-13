@@ -74,6 +74,9 @@ namespace GCFinalProject.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.CategoryName = (from c in db.Categorys
+                                   where c.CategoryID == @event.CategoryID
+                                   select c.CategoryName).Single();
             return View(@event);
         }
 
