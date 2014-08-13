@@ -90,11 +90,13 @@ color:antiquewhite
 }
 
  .Logo{
-      background-image: url(Images/cooltext1678797754.png);
+     margin-top:20px;
+      background-image: url(Images/cooltext1678985873.png);
       width:433px;
       height:101px;
       background-size:cover;
       margin-left:-40px;
+      border-radius: 40px;
  }
  .table{
      background-color:rgba(128, 128, 128,.4);
