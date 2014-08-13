@@ -54,10 +54,11 @@ textarea {
 
 
  .Slider{float:right;
-         margin-top:90px
+         margin-top:10px
     
  }
  .JumboHeader{
+     
      width:40%;
      float:left;
      color:darkturquoise;
@@ -74,3 +75,12 @@ textarea {
      color:white;
  }
 
+#front-intro  {
+    padding-top: 10px; 
+    font-family:"Times New Roman", Times, serif;
+    
+    font-size:20px
+}
+.Categorytitle{
+color:antiquewhite
+}

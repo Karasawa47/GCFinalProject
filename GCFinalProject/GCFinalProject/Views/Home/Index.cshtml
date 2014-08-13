@@ -7,6 +7,7 @@
         <div class="JumboHeader">
 
             <h1>Detroit Events </h1>
+        <br />
             @using (Html.BeginForm("Index", "Event", FormMethod.Get))
             {
                 <p id="HomeCalendar">
@@ -15,17 +16,18 @@
 
                 </p>
             }
-        </div>
-        <div id="comslider_in_point_315211"class="Slider"></div>
-        <script type="text/javascript">var oCOMScript315211 = document.createElement('script'); oCOMScript315211.src = "http://commondatastorage.googleapis.com/comslider/target/users/1407523368xe8cdedcea7eac715a577cf949fc8ec84/comslider.js?timestamp=1407528806"; oCOMScript315211.type = 'text/javascript'; document.getElementsByTagName("head").item(0).appendChild(oCOMScript315211);</script>
-    </div>
+        </div><p style="font-family:'Times New Roman', Times, serif;color:whitesmoke;font-size:20px;"
+       <div id="front-intro" > <p style="color:antiquewhite"><B>Detroit Events provides visitors with the most up to date events scheduled for the Metro Detroit are, check the Events Calendar for a schedual of events.</p></div>
+    <div id="comslider_in_point_315211" class="Slider"></div>
+    <script type="text/javascript">var oCOMScript315211 = document.createElement('script'); oCOMScript315211.src = "http://commondatastorage.googleapis.com/comslider/target/users/1407523368xe8cdedcea7eac715a577cf949fc8ec84/comslider.js?timestamp=1407528806"; oCOMScript315211.type = 'text/javascript'; document.getElementsByTagName("head").item(0).appendChild(oCOMScript315211);</script>
+</div>
 </div>
 
 <div class="row">
     <div class="col-md-3">
         <center>
-            <h2 class ="music-title">
-                @Html.ActionLink("Music", "Index", "Event", new {CategoryId=2}, null)</h2>
+            <h2 class ="Categorytitle">
+                @Html.ActionLink("Music", "Index", "Event", new { CategoryId = 2 }, new { @class = "Categorytitle" })</h2>
                 <p>
                     @*<img src='@Url.Content("~/Content/Images/imagesHBJ7HR09.jpg")' alt="Music" width="200" height="230">*@
 
@@ -40,8 +42,8 @@
     </div>
     <div class="col-md-3">
         <center>
-            <h2 class="festival-title">
-                @Html.ActionLink("Festival", "index", "event", new { categoryid = 5 }, null) </h2>
+            <h2 class="Categorytitle">
+                @Html.ActionLink("Festival", "index", "event", new { categoryid = 5 }, new { @class = "Categorytitle" }) </h2>
                 <p>
                     @*<img src='@Url.Content("~/content/images/imagesu2qhjlzk.jpg")' alt="festivals" width="200" height="230">*@
                     @using (Html.BeginForm("Index", "Event"))
@@ -54,8 +56,8 @@
     </div>
     <div class="col-md-3">
         <center>
-            <h2 class="sport-title">
-                @Html.ActionLink("Sports","index", "event", new {categoryid=4}, null)</h2>
+            <h2 style="color:fuchsia" class="Categorytitle">
+                @Html.ActionLink("Sports", "index", "event", new { categoryid = 4 }, new { @class = "Categorytitle" })</h2>
                 <p >
                   @*<img src='@Url.Content("~/content/images/imagesp9c07hza.jpg")' alt="sports" width="200" height="230">*@
                     
@@ -76,7 +78,7 @@
                 @Html.ActionLink("Food/Drink",
                                  "Index", "Category/Details/1")</h2>*@
 
-               <h2> @Html.ActionLink("Food/Drinks","index", "event", new { categoryid = 1 }, null)</h2>
+               <h2> @Html.ActionLink("Food/Drinks", "index", "event", new { categoryid = 1 }, new { @class = "Categorytitle" })</h2>
 
                 <p>
                     @*<<img src='@Url.Content("~/content/images/images.jpg")' alt="food/drink" width="200" height="230">*@
