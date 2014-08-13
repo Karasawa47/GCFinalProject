@@ -76,4 +76,10 @@ textarea {
      background: linear-gradient(to right,  red,darkred,black); /* Standard syntax */
      color:white;
  }
-
+ .Logo{
+      background-image: url(Images/cooltext1678797754.png);
+      width:433px;
+      height:101px;
+      background-size:cover;
+      margin-left:-40px;
+ }
