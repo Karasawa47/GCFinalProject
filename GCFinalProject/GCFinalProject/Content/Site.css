@@ -71,9 +71,13 @@ textarea {
      color:darkturquoise;
  }
  .btn{
+     border-width:1px;
+     border-radius: 5px;
+     border-color:#272424;
      background: linear-gradient(to right,  red,darkred,black); /* Standard syntax */
      color:white;
  }
+
 
 #front-intro  {
     padding-top: 10px; 
@@ -84,3 +88,11 @@ textarea {
 .Categorytitle{
 color:antiquewhite
 }
+
+ .Logo{
+      background-image: url(Images/cooltext1678797754.png);
+      width:433px;
+      height:101px;
+      background-size:cover;
+      margin-left:-40px;
+ }
