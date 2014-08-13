@@ -70,6 +70,9 @@ textarea {
      color:darkturquoise;
  }
  .btn{
+     border-width:1px;
+     border-radius: 5px;
+     border-color:#272424;
      background: linear-gradient(to right,  red,darkred,black); /* Standard syntax */
      color:white;
  }
