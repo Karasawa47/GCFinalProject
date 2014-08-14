@@ -111,3 +111,8 @@ color:antiquewhite
         width: 500px;
         height: 400px;
       }
+ .dl-horizontal dt{
+     width:120px;
+     font-size:18px;
+     color:#e8d069;
+ }
