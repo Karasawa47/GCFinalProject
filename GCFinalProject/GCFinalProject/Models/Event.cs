@@ -54,7 +54,7 @@ namespace GCFinalProject.Models
         public string Location { get; set; }
        
         
-        [StringLength(40, MinimumLength=0) ]
+        [StringLength(150, MinimumLength=0) ]
         [Display(Name = "Short Description")]
         public string  ShortSummary { get; set; }
 
