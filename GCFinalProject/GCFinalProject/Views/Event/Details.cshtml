@@ -108,7 +108,7 @@
         <br />
         @Html.DisplayFor(model => model.EventDesc)
     </p>
-    @Html.ActionLink("Comments", "Index", "Comment", new { id = Model.EventID }, null) |
+    @Html.ActionLink("Comments", "Index", "Comment", new { id = Model.EventID }, new { @class = "btn btn-sm" }) 
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.EventID }) |

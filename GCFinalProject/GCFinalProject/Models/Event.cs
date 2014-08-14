@@ -18,12 +18,12 @@ namespace GCFinalProject.Models
         public string EventName { get; set; }
         
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
         [Display(Name = "Start Date")]
         public DateTime StartDate { get; set; }
 
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
         [Display(Name = "End Date")]
         public DateTime EndDate { get; set; }
         
