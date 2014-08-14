@@ -101,3 +101,9 @@ color:antiquewhite
  .table{
      background-color:rgba(128, 128, 128,.4);
  }
+ .globe{
+     padding-top:20px;
+     float:left;
+     align-content:center;
+     width:100%;
+ }
