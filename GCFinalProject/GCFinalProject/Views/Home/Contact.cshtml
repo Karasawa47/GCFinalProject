@@ -15,5 +15,26 @@
     <strong>Support:</strong>   <a href="https://www.facebook.com/DetroitSupportDetroit">Support Detroit </a><br />
     <strong>Marketing:</strong> <a href="http://www.dptv.org/support/">Detroit Public Television</a>
 </address>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+    function initialize() {
+        var map_canvas = document.getElementById('map_canvas');
+        var map_options = {
+            center: new google.maps.LatLng(42.335972, -83.049722),
+            zoom: 16,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(map_canvas, map_options)
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(42.335972, -83.049722),
+            map: map,
+            title: 'Detroit Events'
+        });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<div id="map_canvas"></div>
 
 @Html.ActionLink("Back to Home Page", "Index")
+
