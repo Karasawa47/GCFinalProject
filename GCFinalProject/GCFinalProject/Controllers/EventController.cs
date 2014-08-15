@@ -36,7 +36,7 @@ namespace GCFinalProject.Controllers
                 events = from e in db.Events
                          //where e.EventName.ToUpper() == (searchString).ToUpper()
                          where e.EventName.ToUpper().Contains(searchString.ToUpper())
-                         
+                         orderby e.StartDate
                          select e;
             }
             if (categoryID != null && categoryID > 0)
@@ -45,17 +45,20 @@ namespace GCFinalProject.Controllers
                          join c in db.Categorys
                          on e.CategoryID equals c.CategoryID
                          where c.CategoryID == (int)categoryID
+                         orderby e.StartDate
                          select e;
             }
             if(dateS!=null && dateE !=null){
                 events = from e in db.Events
                          where (e.StartDate >= DbFunctions.TruncateTime(dateS) && e.StartDate <= DbFunctions.TruncateTime(dateE))
+                         orderby e.StartDate
                          select e;
             }
             if (dateS != null && dateE == null)
             {
                 events = from e in db.Events
                          where (e.StartDate >= DbFunctions.TruncateTime(dateS) && e.StartDate <= DbFunctions.TruncateTime((dateS)))
+                         orderby e.StartDate
                          select e;
             }
             PopulateCategoryDropDown();

@@ -27,6 +27,7 @@ namespace GCFinalProject.Controllers
               ViewBag.EventId = id.Value;
               comments = from c in comments
                          where c.EventID == id
+                         orderby c.Date
                          select c;
           }
             return View(comments);

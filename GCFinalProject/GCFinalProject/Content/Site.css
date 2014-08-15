@@ -119,3 +119,9 @@ color:antiquewhite
      font-size:18px;
      color:#e8d069;
  }
+ .row{
+     border-radius: 40px;
+     background-color:rgba(40, 40, 40,.7);
+     margin-top:10px;
+     
+ }
